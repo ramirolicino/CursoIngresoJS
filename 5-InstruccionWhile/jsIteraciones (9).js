@@ -34,6 +34,9 @@ function mostrar()
 		respuesta = prompt("Desea continuar?");
 	}
 
+		console.log(maximo);
+		console.log(minimo);
+
 
 document.getElementById("maximo").value = maximo;
 document.getElementById("minimo").value = minimo;
