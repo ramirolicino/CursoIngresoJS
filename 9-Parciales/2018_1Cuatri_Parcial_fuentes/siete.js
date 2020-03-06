@@ -1,5 +1,7 @@
 function mostrar()
 {
+
+/*
     var nota;
     var sexo;
     var contador = 0;
@@ -46,6 +48,62 @@ function mostrar()
     alert("La nota mas baja es: "+notaMinima + " Del sexo "+sexoMinimo);
     alert("La cantidad de varones que su nota haya sido mayor o igual a 6 es: "+contadorDeVarones);
 
-    
+*/
+    var nota;
+    var sexo;
+    var contador = 0;
+
+    while (contador < 5) {
+        contador++
+
+        do{
+            nota = prompt("Ingrese la nota");
+            nota = parseInt(nota);
+
+        }while(isNaN(nota) || nota > 0 || nota < 11);
+
+        do{
+            sexo = prompt("Ingrese el sexo");
+            
+        }while(sexo != "f" && sexo != "m" );
+
+        //Punto a
+
+        acumuladorDeNotas += nota;
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
