@@ -1,108 +1,60 @@
 function mostrar()
 {
-
-/*
     var nota;
     var sexo;
     var contador = 0;
-    var notaMinima;
+    var notasTotales = 0;
+    var promedio;
+    var notaMinimo = 0;
     var sexoMinimo;
-    var contadorDeVarones;
+    var contadorVarones = 0;
 
-    
-    while(contador < 5){ 
-        contador++
-
-        do{
-            nota = prompt("Ingrese un numero")
-            nota = parseInt(nota);
-        } while (isNaN(nota) || nota > 0 || nota < 11); 
-
-        do{
-            sexo = prompt("Ingrese sexo");
-        }while (sexo !="f" && sexo !="m");
-
-        //Punto A
-
-        acumuladorDeNotas += nota;
-
-        promedio = nota / contador;
-
-        //Punto B
-
-        if(contador==1){
-            notaMinima=nota;
-            sexoMinimo=sexo;
-        }else if (nota<notaMinima){
-            notaMinima=nota;
-            sexoMinimo=sexo;
-        }
-
-        //Punto C
-        if(sexo =="m" && nota>6){
-            contadorDeVarones++;
-        }
-    }
-
-    alert("El promeio es: "+promedio);
-    alert("La nota mas baja es: "+notaMinima + " Del sexo "+sexoMinimo);
-    alert("La cantidad de varones que su nota haya sido mayor o igual a 6 es: "+contadorDeVarones);
-
-*/
-    var nota;
-    var sexo;
-    var contador = 0;
-
-    while (contador < 5) {
-        contador++
+    while(contador < 5){
 
         do{
             nota = prompt("Ingrese la nota");
             nota = parseInt(nota);
 
-        }while(isNaN(nota) || nota > 0 || nota < 11);
+        }while(isNaN(nota) || nota < 1 || nota > 10);
 
         do{
             sexo = prompt("Ingrese el sexo");
-            
-        }while(sexo != "f" && sexo != "m" );
 
-        //Punto a
+        }while(!isNaN(sexo) || (sexo != "m" && sexo != "f"));
 
-        acumuladorDeNotas += nota;
+        console.log("nota: "+nota);
+        console.log("sexo: "+sexo);
+        
+        notasTotales += nota;
 
+        //Punto a 
 
+        promedio = (notasTotales) / 5;
 
+        //Punto b
+
+        if(contador == 1 || nota < notaMinimo){
+            notaMinimo = nota;
+            sexoMinimo = sexo;
+        }
+
+        //Punto c 
+
+        if(sexo == "m" && nota >= 6){
+            contadorVarones++;
+        }
+
+        contador++;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    console.log("...");
+    console.log("nota T: "+notasTotales);
+    console.log("...");
+    console.log("promedio: "+promedio);
+    console.log("...");
+    console.log("nota minima: "+notaMinimo+" y sexo "+sexoMinimo);
+    console.log("...");
+    console.log("La cantidad de varones q >= 6: "+contadorVarones);
 
 
 
