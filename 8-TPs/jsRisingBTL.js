@@ -9,5 +9,61 @@ F.	Nacionalidad, “A” para argentinos, “E” para extranjeros, “N” para
  */
 function ComenzarIngreso () 
 {
- 
+    var edad;
+    var sexo;
+    var estadoCivil;
+    var sueldoBruto;
+    var numeroLegajo;
+    var nacionalidad;
+    var respuesta = true;
+
+    while(respuesta){
+        
+        do{
+            edad =  prompt("Ingrese la edad");
+            edad =  parseInt(edad);
+
+        }while(isNaN(edad) || edad < 18 || edad > 90);
+
+        do{
+            sexo = prompt("Ingresar el sexo ");
+
+        }while(!isNaN(sexo) || sexo != "f" && sexo != "m");
+
+        do{
+            estadoCivil = prompt("Ingrese estado civil: Casado / Soltero / Divorciado");
+
+        }while(!isNaN(estadoCivil) || estadoCivil != "casado" && estadoCivil != "soltero" && estadoCivil != "divorciado");
+
+        do{
+            sueldoBruto = prompt("Ingrese su sueldo bruto");
+            sueldoBruto = parseInt(sueldoBruto);
+
+        }while(isNaN(sueldoBruto) || sueldoBruto < 8000);
+
+        do{
+            numeroLegajo = prompt("Ingrese su N` legajo");
+            numeroLegajo = parseInt(numeroLegajo);
+
+        }while(isNaN(numeroLegajo) || numeroLegajo < 999 );
+
+        do{
+            nacionalidad = prompt("Ingrese su nacionalidad");
+
+        }while(!isNaN(nacionalidad) || nacionalidad != "a" && nacionalidad != "e");
+   
+        respuesta = confirm("Formulario finalizado?")
+    }
+    
+    document.getElementById("Edad").value = edad;
+    document.getElementById("Sexo").value = sexo;
+    document.getElementById("EstadoCivil").value = estadoCivil;
+    document.getElementById("Sueldo").value = sueldoBruto;
+    document.getElementById("Legajo").value = numeroLegajo;
+    document.getElementById("Nacionalidad").value = nacionalidad;    
+    
+
+
+
+
 }

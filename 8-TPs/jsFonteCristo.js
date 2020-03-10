@@ -32,16 +32,15 @@ function NumerosPares()
     while(contador > 1){
         contador--;
 
-        console.log(contador);
 
         if(contador % 2 == 0){
             contadorDePares++;
-            console.log(contador);
+            console.log("Pares: "+contador);
         }
 
     }
 
-    alert("Numeros pares: "+contadorDePares);
+    console.log("Numeros pares: "+contadorDePares);
 }
 
 function NumerosImpares()
@@ -53,33 +52,31 @@ function NumerosImpares()
     while(contador > 1){
         contador--;
 
-        console.log(contador);
-
         if(contador % 2 == 1){
-            contadorDePares++;
-            console.log(contador);
+            contadorDeImpares++;
+            console.log("Impares: "+contador);
         }
 
     }
 
-    alert("Numeros pares: "+contadorDePares);
+    console.log("Numeros pares: "+contadorDeImpares);
 }
 
 function NumerosDivisibles()
 {
     ComenzarIngreso ();
     var contador = 0;
-    var conatdorDeDivisible = 0;
+    var contadorDivicibles = 0;
 
     while(contador<101){
-        conatdor++;
+        contador++;
 
         if(numero % contador == 0){
-            conatdorDeDivisible++;
+            contadorDivicibles++;
         }
     }
 
-    alert("Contador de divisibles "+conatdorDeDivisible);
+    console.log("Contador de divisibles: "+contadorDivicibles);
 
 }
 
@@ -102,9 +99,9 @@ function VerificarPrimo()
     }
 
     if(noEsPrimo){
-        alert("No es primo");
+        console.log("No es primo");
     }else{
-        alert("El numero es primo");
+        console.log("El numero es primo");
     }
 
 }
