@@ -1,5 +1,7 @@
 function mostrar()
 {
+
+	/*
 	//Genero el número RANDOM entre 1 y 10 
 
 	var random;
@@ -22,6 +24,6 @@ function mostrar()
 			alert("Suerte la prox");
 		}
 	}
-
+	*/
 
 }//FIN DE LA FUNCIÓN
