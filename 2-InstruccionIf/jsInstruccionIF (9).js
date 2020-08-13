@@ -13,4 +13,13 @@ function mostrar()
 
 	console.log(random);
 	*/
+
+	var random;
+	var max = 11;
+	var min = 0;
+
+	random = Math.floor(Math.random()* (max -min) + min);
+
+	console.log(random);
+
 }//FIN DE LA FUNCIÓN
