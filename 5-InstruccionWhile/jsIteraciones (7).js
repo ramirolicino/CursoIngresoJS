@@ -1,5 +1,6 @@
 function mostrar()
 {
+	/*
 	var contador=0;
 	var acumulador=0;
 	var numero;
@@ -29,10 +30,32 @@ function mostrar()
 		
 	}
 
+	document.getElementById('suma').value=acumulador;
+	document.getElementById('promedio').value=acumulador/contador;
+	*/
+	//Inicio
+	var numero;
+	var acumulador = 0;
+	var contador = 0;
+	var promedio;
+	
+	while(confirm("Desea continuar?")){
+		contador++;
+
+		do{
+			numero = prompt("Ingrese un numero");
+			numero = parseInt(numero);
+		}while(isNaN(numero));
+
+		acumulador += numero;
+
+	}
+
+	promedio = acumulador / contador;
+
+	document.getElementById('suma').value = acumulador;
+	document.getElementById('promedio').value = promedio;
 
 
-
-document.getElementById('suma').value=acumulador;
-document.getElementById('promedio').value=acumulador/contador;
-
+	
 }//FIN DE LA FUNCIÓN
