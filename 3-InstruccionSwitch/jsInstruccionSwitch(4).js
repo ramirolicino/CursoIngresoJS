@@ -1,6 +1,7 @@
 function mostrar()
 {
 //tomo la edad  
+    /*
 var mesDelAño = document.getElementById('mes').value;
 
 //alert (mesDelAño);
@@ -26,6 +27,29 @@ var mesDelAño = document.getElementById('mes').value;
         default:
             alert("Tienen 28 dias");
     }
+    */
+   //Inicio
+    var mesDelAño;
+
+    mesDelAño = document.getElementById("mes").value;
+
+    switch(mesDelAño){
+        case "Abril":
+        case "Junio":
+        case "Septiembre":
+        case "Noviembre":
+            msj= "30 Dias";
+            break;
+        case "Febrero":
+            msj= "28 Dias";
+            break;
+        default:
+            msj="31 Dias";
+    }
+
+    console.log(msj);
+
+
 
 
 

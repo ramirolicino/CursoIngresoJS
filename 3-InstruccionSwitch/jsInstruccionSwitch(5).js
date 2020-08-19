@@ -1,6 +1,7 @@
 function mostrar()
 {
 //tomo la edad  
+    /*
 var laHora = document.getElementById('hora').value;
 
 //alert (laHora);
@@ -16,7 +17,25 @@ var laHora = document.getElementById('hora').value;
         default:
             alert("...");
     }
+    */
+   //Inicio
+    var laHora;
 
+    laHora = document.getElementById("hora").value;
 
+    switch(laHora){
+    case "7":
+    case "8":
+    case "9":
+    case "10":
+    case "11":
+        msj= "Es de mañana";
+        break;
+    default:
+        msj= "No config.";
+
+    }
+    
+    console.log(msj);
 
 }//FIN DE LA FUNCIÓN

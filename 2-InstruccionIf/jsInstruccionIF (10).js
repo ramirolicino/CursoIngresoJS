@@ -36,9 +36,9 @@ function mostrar()
 
 	if(random > 8){
 		console.log("Exelente");
-	}else if(random > 4){
+	}else if(random >= 4){
 		console.log("Aprobo");
-	}else if(random < 4){
+	}else {
 		console.log("Mal");
 	}
 
